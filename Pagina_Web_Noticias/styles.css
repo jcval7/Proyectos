@@ -1,0 +1,249 @@
+html,body {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contenedor principal para que las secciones ocupen el espacio antes del footer */
+main {
+    flex: 1;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    color: white;
+    padding: 20px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+}
+
+/* NAVBAR */
+/* Estilos generales del navbar */
+.navbar {
+    background: dodgerblue;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    margin: 20px auto;
+    width: fit-content;
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos de los enlaces del navbar */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    display: inline-block;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+/* Efecto al pasar el mouse */
+.navbar ul li a:hover {
+    background: darkgreen;
+    transform: scale(1.1);
+}
+
+/* SECCIONES */
+.seccion {
+    display: none;
+    padding: 50px;
+    margin-top: 20px;
+}
+
+/* Centrar los títulos h2 */
+.seccion h2 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Sección Inicio */
+.inicio-container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 20px;
+}
+
+.inicio-izquierda img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+/* Estilo del icono de UMFM */
+.umfm-icon {
+    width: 150px; /* Ajusta el tamaño del icono */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.umfm-icon:hover {
+    transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
+}
+
+.inicio-derecha img {
+    width: 150px;
+    border-radius: 10px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Sección Noticias */
+.noticias-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 300px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    text-align: center;
+}
+
+.flecha {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+    color: #444;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.flecha:hover {
+    background: #ddd;
+}
+
+.contenedor-mision-vision {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+.mision, .vision {
+    width: 45%;
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.mision h3, .vision h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.mision p, .vision p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.galeria {
+    text-align: center;
+    padding: 20px;
+}
+
+.galeria h2 {
+    margin-bottom: 20px;
+}
+
+.galeria img {
+    width: 200px;  /* Ajusta el tamaño */
+    height: 150px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 5px solid transparent;
+    transition: transform 0.3s, border 0.3s;
+}
+
+/* Bordes de colores cambiantes */
+.galeria img:nth-child(2) { border-color: #ff5733; } /* Rojo */
+.galeria img:nth-child(3) { border-color: #33ff57; } /* Verde */
+.galeria img:nth-child(4) { border-color: #3357ff; } /* Azul */
+
+/* Efecto al pasar el mouse */
+.galeria img:hover {
+    transform: scale(1.1);
+    border-color: #ffd700; /* Amarillo */
+}
+
+.seccion:not(.oculto) {
+    display: block;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}

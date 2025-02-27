@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NTM NEWS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="medios\logo_news-1.ico">
+    <script defer src="scripts.js"></script>
+</head>
+<body>
+
+    <header class="header">
+        <img src="medios/logo_news-1.png" alt="NotiUManizales Logo" class="logo">
+        <h1>NTM NEWS</h1>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#inicio" onclick="mostrarSeccion('inicio')">Inicio</a></li>
+            <li><a href="#noticias" onclick="mostrarSeccion('noticias')">Noticias</a></li>
+            <li><a href="#quienes-somos" onclick="mostrarSeccion('quienes-somos')">Quiénes Somos</a></li>
+            <li><a href="#galeria" onclick="mostrarSeccion('galeria')">Galería</a></li>
+        </ul>
+    </nav>
+<main>
+    <!-- Sección Inicio -->
+    <section id="inicio" class="seccion">
+        <div class="inicio-container">
+            <div class="inicio-izquierda">
+                <a href="https://umfm.com.co/" target="_blank">
+                    <img src="medios\logo umfm.jpg" alt="UMFM" class="umfm-icon">
+                </a>
+            </div>
+            <div class="inicio-derecha">
+                <img src="vertical1.jpg" alt="Imagen Vertical 1">
+                <img src="vertical2.jpg" alt="Imagen Vertical 2">
+                <img src="vertical3.jpg" alt="Imagen Vertical 3">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Noticias -->
+    <section id="noticias" class="noticias seccion oculto">
+        <h2>Últimas Noticias</h2>
+        <div class="noticias-container">
+            <div class="card">
+                <img src="medios\Noticias NTM\Noti_1_canal_panama.jpeg" alt="Noticia 1">
+                <h3>Canal de Panamá avanza en el desarrollo del Proyecto Río Indio que será vital para la operación de la 
+                    vía interoceánica</h3>
+                <a href="https://www.mundomaritimo.cl/noticias/canal-de-panama-avanza-en-el-desarrollo-del-proyecto-rio-indio-que-sera-vital-para-la-operacion-de-la-via-interoceanica" class="flecha">➜</a>
+            </div>
+            <div class="card">
+                <img src="noticia2.jpg" alt="Noticia 2">
+                <h3>Título de la Noticia 2</h3>
+                <a href="https://ejemplo.com/noticia2" class="flecha">➜</a>
+            </div>
+            <div class="card">
+                <img src="noticia3.jpg" alt="Noticia 3">
+                <h3>Título de la Noticia 3</h3>
+                <a href="https://ejemplo.com/noticia3" class="flecha">➜</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="quienes-somos" class="seccion oculto">
+        <h2>Quiénes Somos</h2>
+        <div class="contenedor-mision-vision">
+            <div class="mision">
+                <h3>Misión</h3>
+                <p>Brindar información veraz, oportuna y objetiva sobre los acontecimientos más relevantes de nuestra comunidad, el país y el mundo. Nos comprometemos a informar con responsabilidad y ética, manteniendo a nuestros lectores actualizados con noticias de calidad.</p>
+            </div>
+            <div class="vision">
+                <h3>Visión</h3>
+                <p>Ser el medio de comunicación digital líder en la región, reconocido por nuestra imparcialidad, confiabilidad y capacidad de adaptación a las nuevas tecnologías. Aspiramos a consolidarnos como la principal fuente de información para nuestros lectores.</p>
+            </div>
+        </div>
+    </section>   
+    <section id="galeria" class="galeria seccion oculto">
+        <h2>Galería</h2>
+        <img src="foto1.jpg" alt="Foto 1">
+        <img src="foto2.jpg" alt="Foto 2">
+        <img src="foto3.jpg" alt="Foto 3">
+    </section>
+</main>
+    <footer class="footer">
+        <p>&copy; 2025 NTM NEWS. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

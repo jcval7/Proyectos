@@ -87,14 +87,15 @@ main {
 /* SECCIONES */
 .seccion {
     display: none;
-    padding: 50px;
+    padding: 50px; /* Ajuste de espacio uniforme */
     margin-top: 20px;
 }
 
 /* Centrar los títulos h2 */
 .seccion h2 {
     text-align: center;
-    width: 100%;
+    margin-top: 20px; /* Espacio controlado desde el navbar */
+    font-size: 28px;
     margin-bottom: 20px;
 }
 
@@ -107,7 +108,7 @@ main {
 }
 
 .inicio-izquierda img {
-    width: 300px;
+    width: 350px;
     border-radius: 10px;
 }
 
@@ -123,10 +124,14 @@ main {
 }
 
 .inicio-derecha img {
-    width: 150px;
+    width: 250px;
     border-radius: 10px;
     display: block;
     margin-bottom: 10px;
+}
+
+.inicio-derecha img:hover{
+    transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
 }
 
 /* Sección Noticias */
@@ -135,67 +140,73 @@ main {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
-    padding: 20px;
 }
 
 .card {
-    background-color: white;
+    width: 300px; /* Tamaño fijo para cada tarjeta */
+    background: mediumseagreen;
     border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     padding: 15px;
     text-align: center;
-    transition: transform 0.2s;
-}
-
-.card:hover {
-    transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .card img {
     width: 300px;
-    height: 250px;
-    border-radius: 10px;
+    height: 200px; /* Altura fija para imágenes */
+    object-fit: cover; /* Evita que las imágenes se deformen */
+    border-radius: 8px;
 }
 
 .card h3 {
+    font-size: 20px;
+    font-weight: bold;
     margin: 10px 0;
-    font-size: 18px;
-    text-align: center;
+    color: white;
+    max-height: 80px; /* Limita la altura del título */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Máximo 3 líneas */
+    -webkit-box-orient: vertical;
 }
 
 .flecha {
     display: inline-block;
+    margin-top: auto; /* Empuja la flecha hacia abajo */
     text-decoration: none;
     font-size: 20px;
-    color: #444;
-    padding: 10px;
-    border-radius: 50%;
-    transition: background 0.3s;
+    color: #007bff;
+    transition: transform 0.2s;
 }
 
 .flecha:hover {
-    background: #ddd;
+    transform: scale(1.2);
 }
 
 .contenedor-mision-vision {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 30px;
+    gap: 10px;
     padding: 20px;
 }
 
 .mision, .vision {
     width: 45%;
     background: #f8f8f8;
-    padding: 20px;
+    border: 3px solid green; /* Borde de color verde */ 
+    padding: 5px;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
 .mision h3, .vision h3 {
-    font-size: 22px;
+    font-size: 40px;
     margin-bottom: 10px;
 }
 
@@ -214,8 +225,8 @@ main {
 }
 
 .galeria img {
-    width: 200px;  /* Ajusta el tamaño */
-    height: 150px;
+    width: 350px;  /* Ajusta el tamaño */
+    height: 250px;
     margin: 10px;
     border-radius: 10px;
     border: 5px solid transparent;
@@ -226,11 +237,14 @@ main {
 .galeria img:nth-child(2) { border-color: #ff5733; } /* Rojo */
 .galeria img:nth-child(3) { border-color: #33ff57; } /* Verde */
 .galeria img:nth-child(4) { border-color: #3357ff; } /* Azul */
+.galeria img:nth-child(5) { border-color: #ffd700; } /* Amarillo */
+.galeria img:nth-child(6) { border-color: darkred; } /* Rojo oscuro */
+.galeria img:nth-child(7) { border-color: skyblue; } /* Azul Cielo */
 
 /* Efecto al pasar el mouse */
 .galeria img:hover {
     transform: scale(1.1);
-    border-color: #ffd700; /* Amarillo */
+    border-color: green; /* Verde */
 }
 
 .seccion:not(.oculto) {
